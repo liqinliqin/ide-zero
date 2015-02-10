@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartMatrix Zero+ IDE</title>
+    <link rel="icon" href="sm.ico">
+    <link rel="stylesheet" href="style/app.css">
+    <script src="lib/angular.js"></script>
+  </head>
+  <body ng-app>
+    <div id="app">
+      <div class="navbar navbar-fixed-top" id="toolbar">
+        <ul class="nav navbar-nav buttons"><!--
+          <li>
+            <a href="#" class="button-new">
+              <i class="icon-file"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="button-open">
+              <i class="icon-folder-open"></i></a>
+          </li>
+          <li>
+            <a href="#" class="button-save">
+              <i class="icon-save"></i></a></li>-->
+          <li>
+            <a href="#" id="run" class="button-upload">
+              <i class="icon-chevron-right"></i>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav pull-right">
+          <li>
+            <div class="form-group" style="margin-top:10px">
+		  <input id="iphost" type="text"class="form-control" placeholder="IP">
+	   </div></li><li><div class="col-lg-5" style="margin-top:10px">
+		<input id="port" type="text"class="form-control" value="9999" placeholder="port"></div>
+          </li><li><div class="col-lg-3" style="margin-top:8px">
+		<button class="btn btn-default" id="connect" type="button">Connect!</button></div>
+          </li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              Theme <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" id="theme-selector">
+              <li data-theme="solarized dark"><a href="#">Solarized Dark</a></li>
+              <li data-theme="solarized light"><a href="#">Solarized Light</a></li>
+              <li data-theme="ambiance"><a href="#">Ambiance</a></li>
+              <li data-theme="elegant"><a href="#">Elegant</a></li>
+              <li data-theme="default"><a href="#">Default</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+	
+      <div class="container" id="container">
+        <div class="row"><!--
+          <div class="col-3" id="sidebar">
+            <div class="sidebar-title">
+              Sidebar
+            </div>
+            <div class="sidebar">
+              <ul>
+                <li class="active"><i class="icon icon-folder-open"></i> Folder</li>
+                <li class="sub">File</li>
+              </ul>
+            </div>
+          </div>-->
+          <div class="col-12" id="code">
+            <div></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="serial-terminal">
+        <div class="toggle">Terminal</div>
+        <div class="terminal">
+          <pre class="output"></pre>
+          <pre class="input" contenteditable></pre>
+          <div class="input-caret">&gt;</div>
+        </div>
+      </div>
+    </div>
+    <script src="lib/jquery-2.0.2.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/codemirror/lib/codemirror.js"></script>
+    <script src="lib/codemirror/mode/scheme/scheme.js"></script>
+    <script src="socketterm.js"></script>
+    <script src="script/app.js"></script>
+  </body>
+</html>

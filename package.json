@@ -1,0 +1,16 @@
+{
+    "main": "index.html",                              /* APP的主入口，文件名任意；必选 */
+    "name": "zeroplus",                                /* APP的名称，必须具备唯一性，且符合正常变量命名；必选 */
+    "description": "SmartMatrix IDE",         /* APP的简单描述 */
+    "version": "0.1.0",                               /* APP的版本号 */
+    "keywords": [ "SmartMatrix IDE", "Zero+" ],            /* APP的关键字，搜索APP时用到 */
+    "window": {                                       /* APP的窗口属性 */
+        "toolbar": false,                              /* 是否显示工具栏 */
+        "width": 800,                                 /* 窗口初始化大小 */
+        "height": 500,
+        "frame": true,                                 /* 是否显示外窗体，如最大化、最小化、关闭按钮 */
+	"icon": "sm.png"			//icon图标
+    },
+    "user-agent": "SmartMatrix IDE" /* 可自定义APP的UA */
+}
+
